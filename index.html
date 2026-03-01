@@ -211,89 +211,102 @@
     <section class="what" id="services">
         <div class="container">
             <div class="what__head">
-                <span class="section-tag">What We Do</span>
-                <h2 class="what__title">We love what we do</h2>
-                <p class="what__sub">We craft marketing experiences that make people talk, share and engage.</p>
+                <h2 class="what__title">We love what <span style="color:var(--primary);">we do</span></h2>
+                <p class="what__sub">Digital Marketing Lahore is a professional digital marketing agency in Lahore
+                    specializing in user-centered design, strong client collaboration, digital marketing<br>and
+                    unparalleled customer support.</p>
             </div>
 
-            <div class="services-showcase">
-                <div class="service-card-new">
-                    <div class="service-card-new__img">
-                        <img src="./images/seo-service.png" alt="SEO Services" loading="lazy">
-                    </div>
-                    <div class="service-card-new__body">
-                        <div class="service-card-new__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                        <h3 class="service-card-new__title">Search Engine Optimization</h3>
-                        <p class="service-card-new__text">Boost your rankings on Google with our proven SEO strategies.
-                            We deliver organic traffic and lasting results.</p>
-                        <a class="service-card-new__link" href="services.html#seo">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card-new">
-                    <div class="service-card-new__img">
-                        <img src="./images/web-design-service.png" alt="Web Design" loading="lazy">
-                    </div>
-                    <div class="service-card-new__body">
-                        <div class="service-card-new__icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <h3 class="service-card-new__title">Web Design &amp; Development</h3>
-                        <p class="service-card-new__text">Beautiful, responsive websites built with cutting-edge
-                            technology. Designed to convert visitors into customers.</p>
-                        <a class="service-card-new__link" href="services.html#webdev">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
+            <div class="services-masonry">
+                <!-- Column 1 -->
+                <div class="masonry-col">
+                    <a href="services.html#seo" class="masonry-card masonry-card--large"
+                        style="background-color: #1a1a1a;" data-title="SEO">
+                        <div class="masonry-card__content">
+                            <h3 class="masonry-card__title" style="color:#fff;">Search Engine<br>Optimization</h3>
+                            <div class="masonry-card__img-container">
+                                <img src="./images/seo-service.png" alt="SEO" class="masonry-card__img"
+                                    style="margin-top:20px; width:90%;">
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Added red CTA button matching reference -->
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="contact.html" class="btn btn--primary"
+                            style="border-radius: 4px; padding: 14px 24px; font-weight: 600; font-size: 15px;">Digital
+                            Marketing Agency in Lahore</a>
                     </div>
                 </div>
-                <div class="service-card-new">
-                    <div class="service-card-new__img">
-                        <img src="./images/social-media-service.png" alt="Social Media" loading="lazy">
-                    </div>
-                    <div class="service-card-new__body">
-                        <div class="service-card-new__icon"><i class="fa-solid fa-share-nodes"></i></div>
-                        <h3 class="service-card-new__title">Social Media Marketing</h3>
-                        <p class="service-card-new__text">Engage your audience across all social platforms. We create
-                            content that builds communities and drives sales.</p>
-                        <a class="service-card-new__link" href="services.html#smo">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+
+                <!-- Column 2 -->
+                <div class="masonry-col">
+                    <a href="services.html#webdev" class="masonry-card masonry-card--medium"
+                        style="background-color: #6bc8cb;" data-title="WEB">
+                        <div class="masonry-card__content">
+                            <h3 class="masonry-card__title" style="color:#fff;">Web<br>Development</h3>
+                            <div class="masonry-card__img-container"
+                                style="position:absolute; bottom:0; right:0; width:85%;">
+                                <img src="./images/web_development_image.jpg" alt="Web Development"
+                                    class="masonry-card__img">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="services.html#smo" class="masonry-card masonry-card--medium"
+                        style="background-color: #6bcf9a;" data-title="SOCIAL">
+                        <div class="masonry-card__content">
+                            <h3 class="masonry-card__title" style="color:#fff;">Social Media<br>Optimization</h3>
+                            <div class="masonry-card__img-container"
+                                style="position:absolute; bottom:0; right:0; width:85%;">
+                                <img src="./images/social-media-service.png" alt="Social Media"
+                                    class="masonry-card__img">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="services.html#ppc" class="masonry-card masonry-card--small"
+                        style="background-color: var(--black-2);">
+                        <div class="masonry-card__content">
+                            <h3 class="masonry-card__title" style="color:#fff; margin-bottom:0;">Pay Per
+                                Click<br>Marketing</h3>
+                        </div>
+                    </a>
                 </div>
-                <div class="service-card-new">
-                    <div class="service-card-new__img">
-                        <img src="./images/ppc-service.png" alt="Pay Per Click" loading="lazy">
-                    </div>
-                    <div class="service-card-new__body">
-                        <div class="service-card-new__icon"><i class="fa-solid fa-bullseye"></i></div>
-                        <h3 class="service-card-new__title">Pay Per Click Advertising</h3>
-                        <p class="service-card-new__text">Maximize your ROI with targeted PPC campaigns on Google Ads
-                            and social media platforms.</p>
-                        <a class="service-card-new__link" href="services.html#ppc">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card-new">
-                    <div class="service-card-new__img">
-                        <img src="./images/branding-service.png" alt="Branding" loading="lazy">
-                    </div>
-                    <div class="service-card-new__body">
-                        <div class="service-card-new__icon"><i class="fa-solid fa-palette"></i></div>
-                        <h3 class="service-card-new__title">Corporate Branding</h3>
-                        <p class="service-card-new__text">Build a memorable brand identity with our expert logo design,
-                            print materials, and visual branding strategies.</p>
-                        <a class="service-card-new__link" href="services.html#branding">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card-new">
-                    <div class="service-card-new__img">
-                        <img src="./images/email-marketing.png" alt="Email Marketing" loading="lazy">
-                    </div>
-                    <div class="service-card-new__body">
-                        <div class="service-card-new__icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-                        <h3 class="service-card-new__title">Email Marketing</h3>
-                        <p class="service-card-new__text">Nurture leads and retain customers with personalized email
-                            campaigns that deliver measurable results.</p>
-                        <a class="service-card-new__link" href="services.html#email">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+
+                <!-- Column 3 -->
+                <div class="masonry-col">
+                    <a href="services.html#ecommerce" class="masonry-card masonry-card--medium"
+                        style="background-color: #ed312b;" data-title="ECOM">
+                        <div class="masonry-card__content">
+                            <h3 class="masonry-card__title" style="color:#fff;">Ecommerce<br>Store</h3>
+                            <div class="masonry-card__img-container"
+                                style="position:absolute; bottom:0; right:0; width:80%;">
+                                <img src="./images/ecommerce_development.jpg" alt="Ecommerce" class="masonry-card__img">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="services.html#branding" class="masonry-card masonry-card--medium"
+                        style="background-color: #d69f0f;" data-title="PHOTO">
+                        <div class="masonry-card__content">
+                            <h3 class="masonry-card__title" style="color:#fff;">Product<br>Photography</h3>
+                            <div class="masonry-card__img-container"
+                                style="position:absolute; bottom:15px; right:15px; width:70%;">
+                                <img src="./images/web-design-service.png" alt="Photography" class="masonry-card__img"
+                                    style="transform: scale(1.1); transform-origin: center;">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="services.html#content" class="masonry-card masonry-card--small"
+                        style="background: linear-gradient(135deg, #a481aa, #9a92a5);" data-title="CONTENT">
+                        <div class="masonry-card__content" style="display:flex; align-items:center;">
+                            <h3 class="masonry-card__title" style="color:#fff; margin-bottom:0;">Content<br>Marketing
+                            </h3>
+                            <div class="masonry-card__img-container"
+                                style="position:absolute; bottom:-10px; right:0px; width:65%;">
+                                <img src="./images/email-marketing.png" alt="Content" class="masonry-card__img"
+                                    style="transform: rotate(5deg) scale(1.2);">
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
