@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Rehmax Digitals</title>
+    <meta name="description"
+        content="Explore our comprehensive digital marketing services including SEO, web development, social media, PPC, branding, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <div class="topbar__left">
+                <a class="topbar__item" href="mailto:info@rehmaxdigitals.com"><i
+                        class="fa-solid fa-envelope"></i><span>info@rehmaxdigitals.com</span></a>
+                <a class="topbar__item" href="tel:+923211112368"><i
+                        class="fa-solid fa-phone"></i><span>+92-321-111-236-8</span></a>
+            </div>
+            <div class="topbar__right">
+                <a class="topbar__social" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="topbar__social" href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a class="topbar__social" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="topbar__social" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="siteHeader">
+        <div class="container header__inner">
+            <a class="brand" href="index.html"><img src="./images/Rehmax Logo.jpg" alt="Rehmax Digitals"
+                    class="brand__logo"></a>
+            <nav class="nav" id="navMenu">
+                <a class="nav__link" href="index.html">Home</a>
+                <div class="nav__dropdown">
+                    <a class="nav__link nav__link--has-child nav__link--active" href="services.html">Services <i
+                            class="fa-solid fa-chevron-down nav__chevron"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu__inner">
+                            <div class="mega-menu__col">
+                                <div class="mega-menu__heading">Digital Marketing</div>
+                                <a class="mega-menu__link" href="#seo">Search Engine Optimization</a>
+                                <a class="mega-menu__link" href="#smo">Social Media Optimization</a>
+                                <a class="mega-menu__link" href="#ppc">Pay Per Click</a>
+                                <a class="mega-menu__link" href="#email">Email Marketing</a>
+                                <a class="mega-menu__link" href="#reputation">Reputation Management</a>
+                            </div>
+                            <div class="mega-menu__col">
+                                <div class="mega-menu__heading">Development</div>
+                                <a class="mega-menu__link" href="#webdev">Web Development</a>
+                                <a class="mega-menu__link" href="#ecommerce">Ecommerce Development</a>
+                                <a class="mega-menu__link" href="#app">App Development</a>
+                            </div>
+                            <div class="mega-menu__col">
+                                <div class="mega-menu__heading">Branding &amp; Design</div>
+                                <a class="mega-menu__link" href="#branding">Corporate Branding</a>
+                                <a class="mega-menu__link" href="#logo">Logo Design</a>
+                                <a class="mega-menu__link" href="#graphic">Graphic Design</a>
+                                <a class="mega-menu__link" href="#video">Animated Videos</a>
+                            </div>
+                            <div class="mega-menu__col mega-menu__col--cta">
+                                <div class="mega-menu__heading">Get Started</div>
+                                <p class="mega-menu__desc">Ready to grow your business? Let's discuss your project
+                                    today.</p>
+                                <a class="btn btn--primary btn--small" href="contact.html">Request a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav__link" href="about.html">About</a>
+                <a class="nav__link" href="pricing.html">Pricing</a>
+                <a class="nav__link" href="blog.html">Blog</a>
+                <a class="nav__link" href="contact.html">Contact</a>
+            </nav>
+            <div class="header__actions">
+                <a class="btn btn--outline" href="contact.html">Request a Quote</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span class="bar"></span><span
+                        class="bar"></span><span class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero__bg"
+            style="background-image:linear-gradient(rgba(17,17,17,0.75),rgba(17,17,17,0.75)),url('./images/hero-2.png')">
+        </div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">Our Services</h1>
+            <p class="page-hero__sub">Comprehensive digital solutions to help your business grow online and dominate
+                your market.</p>
+            <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Services</span></div>
+        </div>
+    </section>
+
+    <!-- Lead Strip -->
+    <section class="lead-strip">
+        <div class="container">
+            <div class="lead-strip__card">
+                <div class="lead-strip__title">let's build something great together!</div>
+                <form class="lead-strip__form" id="leadForm">
+                    <input class="lead-strip__input" type="text" name="name" placeholder="Your Name" required>
+                    <input class="lead-strip__input" type="email" name="email" placeholder="Email Address" required>
+                    <select class="lead-strip__input" name="service">
+                        <option value="">Select Service</option>
+                        <option value="seo">SEO</option>
+                        <option value="web">Web Development</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="branding">Branding</option>
+                    </select>
+                    <input class="lead-strip__input" type="tel" name="phone" placeholder="Phone Number">
+                    <button class="lead-strip__btn" type="submit">Get a Quote <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Service -->
+    <section class="svc-section" id="seo">
+        <div class="container">
+            <div class="svc-detail reveal">
+                <div class="svc-detail__img"><img src="./images/seo-service.png" alt="SEO Services"></div>
+                <div>
+                    <span class="svc-detail__tag">Digital Marketing</span>
+                    <h2 class="svc-detail__title">Search Engine Optimization</h2>
+                    <p class="svc-detail__text">Drive your business to the first page of search engines. We offer
+                        result-oriented SEO services that swiftly position your website in peak results with white-hat
+                        techniques for lasting success.</p>
+                    <ul class="svc-detail__features">
+                        <li><i class="fa-solid fa-check-circle"></i> Competitive Analysis &amp; Keyword Research</li>
+                        <li><i class="fa-solid fa-check-circle"></i> White-hat Safe SEO Techniques</li>
+                        <li><i class="fa-solid fa-check-circle"></i> On-Page &amp; Off-Page Optimization</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Customized Strategy for Your Business</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Monthly Reports &amp; Performance Monitoring</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a class="btn btn--primary" href="contact.html">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development -->
+    <section class="svc-section" id="webdev">
+        <div class="container">
+            <div class="svc-detail svc-detail--reverse reveal">
+                <div class="svc-detail__img"><img src="./images/web-design-service.png" alt="Web Development"></div>
+                <div>
+                    <span class="svc-detail__tag">Development</span>
+                    <h2 class="svc-detail__title">Web Design &amp; Development</h2>
+                    <p class="svc-detail__text">Beautiful, responsive websites built with cutting-edge technology. From
+                        simple landing pages to complex web applications, we create digital experiences that convert.
+                    </p>
+                    <ul class="svc-detail__features">
+                        <li><i class="fa-solid fa-check-circle"></i> Custom WordPress Development</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Responsive &amp; Mobile-First Design</li>
+                        <li><i class="fa-solid fa-check-circle"></i> E-commerce Solutions (Shopify, WooCommerce)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Performance Optimization &amp; Speed</li>
+                        <li><i class="fa-solid fa-check-circle"></i> UI/UX Design &amp; Wireframing</li>
+                    </ul>
+                    <a class="btn btn--primary" href="contact.html">Start Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="svc-section" id="smo">
+        <div class="container">
+            <div class="svc-detail reveal">
+                <div class="svc-detail__img"><img src="./images/social-media-service.png" alt="Social Media Marketing">
+                </div>
+                <div>
+                    <span class="svc-detail__tag">Digital Marketing</span>
+                    <h2 class="svc-detail__title">Social Media Marketing</h2>
+                    <p class="svc-detail__text">Build a strong social media presence that drives engagement and sales.
+                        We create content strategies tailored to your audience across all major platforms.</p>
+                    <ul class="svc-detail__features">
+                        <li><i class="fa-solid fa-check-circle"></i> Platform Strategy (Facebook, Instagram, LinkedIn)
+                        </li>
+                        <li><i class="fa-solid fa-check-circle"></i> Content Creation &amp; Curation</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Community Management</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Paid Social Advertising</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Analytics &amp; Reporting</li>
+                    </ul>
+                    <a class="btn btn--primary" href="contact.html">Grow Your Social</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PPC -->
+    <section class="svc-section" id="ppc">
+        <div class="container">
+            <div class="svc-detail svc-detail--reverse reveal">
+                <div class="svc-detail__img"><img src="./images/ppc-service.png" alt="Pay Per Click"></div>
+                <div>
+                    <span class="svc-detail__tag">Advertising</span>
+                    <h2 class="svc-detail__title">Pay Per Click Advertising</h2>
+                    <p class="svc-detail__text">Maximize your ROI with precision-targeted PPC campaigns. We manage
+                        Google Ads, Facebook Ads, and more to drive qualified traffic and conversions.</p>
+                    <ul class="svc-detail__features">
+                        <li><i class="fa-solid fa-check-circle"></i> Google Ads Management</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Facebook &amp; Instagram Ads</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Landing Page Optimization</li>
+                        <li><i class="fa-solid fa-check-circle"></i> A/B Testing &amp; Conversion Tracking</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Budget Optimization &amp; Reporting</li>
+                    </ul>
+                    <a class="btn btn--primary" href="contact.html">Launch Campaigns</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Services Feature Grid -->
+    <section style="padding:0 0 60px;background:var(--light-gray)">
+        <div class="container">
+            <div style="text-align:center;padding-top:60px;margin-bottom:10px;">
+                <span class="section-tag">More Services</span>
+                <h2 style="font-size:28px;font-weight:900;margin-bottom:8px;">Everything Your Business Needs</h2>
+                <p style="color:var(--muted);max-width:500px;margin:0 auto;">End-to-end digital solutions under one
+                    roof.</p>
+            </div>
+            <div class="feature-grid" id="branding">
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="feature-card__title">Corporate Branding</h3>
+                    <p class="feature-card__text">Build a strong, memorable brand identity that resonates with your
+                        target audience.</p>
+                </div>
+                <div class="feature-card reveal" id="logo">
+                    <div class="feature-card__icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3 class="feature-card__title">Logo Design</h3>
+                    <p class="feature-card__text">Custom logo designs that capture your brand essence and make a lasting
+                        impression.</p>
+                </div>
+                <div class="feature-card reveal" id="graphic">
+                    <div class="feature-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="feature-card__title">Graphic Design</h3>
+                    <p class="feature-card__text">Eye-catching print and digital designs for all your marketing
+                        materials.</p>
+                </div>
+                <div class="feature-card reveal" id="email">
+                    <div class="feature-card__icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <h3 class="feature-card__title">Email Marketing</h3>
+                    <p class="feature-card__text">Personalized email campaigns that nurture leads and drive conversions.
+                    </p>
+                </div>
+                <div class="feature-card reveal" id="reputation">
+                    <div class="feature-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="feature-card__title">Reputation Management</h3>
+                    <p class="feature-card__text">Protect and enhance your online reputation across all digital
+                        platforms.</p>
+                </div>
+                <div class="feature-card reveal" id="ecommerce">
+                    <div class="feature-card__icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <h3 class="feature-card__title">E-Commerce Development</h3>
+                    <p class="feature-card__text">Full-featured online stores on Shopify, WooCommerce, and custom
+                        platforms.</p>
+                </div>
+                <div class="feature-card reveal" id="video">
+                    <div class="feature-card__icon"><i class="fa-solid fa-video"></i></div>
+                    <h3 class="feature-card__title">Animated Videos</h3>
+                    <p class="feature-card__text">Engaging animated content that explains your products and captures
+                        attention.</p>
+                </div>
+                <div class="feature-card reveal" id="app">
+                    <div class="feature-card__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3 class="feature-card__title">App Development</h3>
+                    <p class="feature-card__text">Native and cross-platform mobile apps tailored to your business needs.
+                    </p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon"><i class="fa-solid fa-camera"></i></div>
+                    <h3 class="feature-card__title">Product Photography</h3>
+                    <p class="feature-card__text">High-quality product photography for e-commerce and marketing
+                        campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container final-cta__inner">
+            <div class="final-cta__left">
+                <div class="final-cta__small"><i class="fa-solid fa-phone"></i> Call us now</div>
+                <div class="final-cta__big">+92-321-111-236-8</div>
+            </div>
+            <div class="final-cta__center">
+                <div class="final-cta__question">ready to discuss your project?</div>
+                <a class="btn btn--dark" href="contact.html">Request Info</a>
+            </div>
+            <div class="final-cta__right">
+                <div class="final-cta__small"><i class="fa-solid fa-envelope"></i> Or email us</div>
+                <div class="final-cta__big">info@rehmaxdigitals.com</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <img src="./images/Rehmax Logo.jpg" alt="Rehmax Digitals" class="footer__logo">
+                <p class="footer__text">We create high-performing digital experiences that help businesses grow online
+                    and generate real revenue.</p>
+                <div class="footer__socials">
+                    <a class="footer__social-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="footer__social-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="footer__social-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="footer__social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Pages</div>
+                <a class="footer__link" href="index.html">Home</a>
+                <a class="footer__link" href="services.html">Services</a>
+                <a class="footer__link" href="about.html">About Us</a>
+                <a class="footer__link" href="pricing.html">Pricing</a>
+                <a class="footer__link" href="blog.html">Blog</a>
+                <a class="footer__link" href="contact.html">Contact</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Services</div>
+                <a class="footer__link" href="services.html#seo">SEO</a>
+                <a class="footer__link" href="services.html#webdev">Web Development</a>
+                <a class="footer__link" href="services.html#smo">Social Media</a>
+                <a class="footer__link" href="services.html#ppc">Pay Per Click</a>
+                <a class="footer__link" href="services.html#branding">Branding</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Contact</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-envelope"></i> info@rehmaxdigitals.com</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-phone"></i> +92-321-111-236-8</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-clock"></i> Mon - Fri, 9am - 6pm</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</div>
+            </div>
+        </div>
+        <div class="container footer__bottom">&copy; 2026 Rehmax Digitals. All rights reserved.</div>
+    </footer>
+
+    <a class="float float--whatsapp" href="https://wa.me/923211112368" target="_blank" aria-label="WhatsApp"><i
+            class="fa-brands fa-whatsapp"></i></a>
+    <button class="float float--chat" id="chatToggle" aria-label="Chat"><i
+            class="fa-solid fa-comment-dots"></i></button>
+    <div class="chat" id="chatWidget" aria-hidden="true">
+        <div class="chat__head">
+            <div class="chat__title">Need help?</div><button class="chat__close" id="chatClose"><i
+                    class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chat__body">
+            <div class="chat__msg">Hi! How can we help you today?</div>
+        </div>
+        <div class="chat__foot"><input class="chat__input" type="text" placeholder="Type a message..."><button
+                class="chat__send"><i class="fa-solid fa-paper-plane"></i></button></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

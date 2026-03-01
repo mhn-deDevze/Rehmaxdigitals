@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehmax Digitals - Digital Marketing Agency</title>
+    <meta name="description"
+        content="Rehmax Digitals is a professional digital marketing agency providing SEO, SMM, web development, branding, and design services. Elevate your brand's online presence.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <div class="topbar__left">
+                <a class="topbar__item" href="mailto:info@rehmaxdigitals.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@rehmaxdigitals.com</span>
+                </a>
+                <a class="topbar__item" href="tel:+923211112368">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+92-321-111-236-8</span>
+                </a>
+            </div>
+            <div class="topbar__right">
+                <a class="topbar__social" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="topbar__social" href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a class="topbar__social" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="topbar__social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with Mega Menu -->
+    <header class="header" id="siteHeader">
+        <div class="container header__inner">
+            <a class="brand" href="index.html">
+                <img src="./images/Rehmax Logo.jpg" alt="Rehmax Digitals" class="brand__logo">
+            </a>
+            <nav class="nav" id="navMenu">
+                <a class="nav__link" href="index.html">Home</a>
+                <div class="nav__dropdown">
+                    <a class="nav__link nav__link--has-child" href="services.html">Services <i
+                            class="fa-solid fa-chevron-down nav__chevron"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu__inner">
+                            <div class="mega-menu__col">
+                                <div class="mega-menu__heading">Digital Marketing</div>
+                                <a class="mega-menu__link" href="services.html#seo">Search Engine Optimization</a>
+                                <a class="mega-menu__link" href="services.html#smo">Social Media Optimization</a>
+                                <a class="mega-menu__link" href="services.html#ppc">Pay Per Click</a>
+                                <a class="mega-menu__link" href="services.html#email">Email Marketing</a>
+                                <a class="mega-menu__link" href="services.html#reputation">Reputation Management</a>
+                            </div>
+                            <div class="mega-menu__col">
+                                <div class="mega-menu__heading">Development</div>
+                                <a class="mega-menu__link" href="services.html#webdev">Web Development</a>
+                                <a class="mega-menu__link" href="services.html#ecommerce">Ecommerce Development</a>
+                                <a class="mega-menu__link" href="services.html#app">App Development</a>
+                            </div>
+                            <div class="mega-menu__col">
+                                <div class="mega-menu__heading">Branding &amp; Design</div>
+                                <a class="mega-menu__link" href="services.html#branding">Corporate Branding</a>
+                                <a class="mega-menu__link" href="services.html#logo">Logo Design</a>
+                                <a class="mega-menu__link" href="services.html#graphic">Graphic Design</a>
+                                <a class="mega-menu__link" href="services.html#video">Animated Videos</a>
+                            </div>
+                            <div class="mega-menu__col mega-menu__col--cta">
+                                <div class="mega-menu__heading">Get Started</div>
+                                <p class="mega-menu__desc">Ready to grow your business? Let's discuss your project
+                                    today.</p>
+                                <a class="btn btn--primary btn--small" href="contact.html">Request a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav__link" href="about.html">About</a>
+                <a class="nav__link" href="pricing.html">Pricing</a>
+                <a class="nav__link" href="blog.html">Blog</a>
+                <a class="nav__link" href="contact.html">Contact</a>
+            </nav>
+            <div class="header__actions">
+                <a class="btn btn--outline" href="contact.html">Request a Quote</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero">
+        <div class="hero__slider" id="heroSlider">
+            <div class="hero__slide is-active" data-slide="0">
+                <div class="hero__bg"
+                    style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('./images/hero-1.png')">
+                </div>
+                <div class="container hero__content">
+                    <span class="hero__badge">Rehmax Digitals</span>
+                    <h1 class="hero__title">Search Engine Optimization<br>For Boosting Your Business</h1>
+                    <p class="hero__text">We help your brand grow with proven SEO strategies, modern design, and
+                        performance-focused development.</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary btn--lg" href="contact.html">Get Started</a>
+                        <a class="btn btn--glass btn--lg" href="services.html">Our Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__slide" data-slide="1">
+                <div class="hero__bg"
+                    style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('./images/hero-2.png')">
+                </div>
+                <div class="container hero__content">
+                    <span class="hero__badge">Digital Excellence</span>
+                    <h1 class="hero__title">Digital Marketing That<br>Drives Real Results</h1>
+                    <p class="hero__text">From strategy to execution, we craft campaigns that convert and scale your
+                        business.</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary btn--lg" href="contact.html">Contact Us</a>
+                        <a class="btn btn--glass btn--lg" href="pricing.html">See Pricing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__slide" data-slide="2">
+                <div class="hero__bg"
+                    style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('./images/hero-3.png')">
+                </div>
+                <div class="container hero__content">
+                    <span class="hero__badge">Creative Solutions</span>
+                    <h1 class="hero__title">Creative Branding &amp; Design<br>For Modern Businesses</h1>
+                    <p class="hero__text">Stand out from the crowd with stunning brand identity, web design, and visual
+                        content.</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary btn--lg" href="contact.html">Start a Project</a>
+                        <a class="btn btn--glass btn--lg" href="about.html">About Us</a>
+                    </div>
+                </div>
+            </div>
+            <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Previous slide"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Next slide"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+            <div class="hero__dots" id="heroDots">
+                <button class="hero__dot is-active" data-slide="0"></button>
+                <button class="hero__dot" data-slide="1"></button>
+                <button class="hero__dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Strip -->
+    <section class="lead-strip" aria-label="Lead form">
+        <div class="container">
+            <div class="lead-strip__card">
+                <div class="lead-strip__title">let's build something great together!</div>
+                <form class="lead-strip__form" id="leadForm">
+                    <input class="lead-strip__input" type="text" name="name" placeholder="Your Name" required>
+                    <input class="lead-strip__input" type="email" name="email" placeholder="Email Address" required>
+                    <select class="lead-strip__input" name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="seo">SEO</option>
+                        <option value="web">Web Development</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="branding">Branding</option>
+                        <option value="design">Graphic Design</option>
+                    </select>
+                    <input class="lead-strip__input" type="tel" name="phone" placeholder="Phone Number">
+                    <button class="lead-strip__btn" type="submit">Get a Quote <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stats__item">
+                    <div class="stats__number" data-count="250">0</div>
+                    <div class="stats__plus">+</div>
+                    <div class="stats__label">Projects Delivered</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number" data-count="120">0</div>
+                    <div class="stats__plus">+</div>
+                    <div class="stats__label">Happy Clients</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number" data-count="15">0</div>
+                    <div class="stats__plus">+</div>
+                    <div class="stats__label">Team Members</div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__number" data-count="8">0</div>
+                    <div class="stats__plus">+</div>
+                    <div class="stats__label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="what" id="services">
+        <div class="container">
+            <div class="what__head">
+                <span class="section-tag">What We Do</span>
+                <h2 class="what__title">We love what we do</h2>
+                <p class="what__sub">We craft marketing experiences that make people talk, share and engage.</p>
+            </div>
+
+            <div class="services-showcase">
+                <div class="service-card-new">
+                    <div class="service-card-new__img">
+                        <img src="./images/seo-service.png" alt="SEO Services" loading="lazy">
+                    </div>
+                    <div class="service-card-new__body">
+                        <div class="service-card-new__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3 class="service-card-new__title">Search Engine Optimization</h3>
+                        <p class="service-card-new__text">Boost your rankings on Google with our proven SEO strategies.
+                            We deliver organic traffic and lasting results.</p>
+                        <a class="service-card-new__link" href="services.html#seo">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card-new">
+                    <div class="service-card-new__img">
+                        <img src="./images/web-design-service.png" alt="Web Design" loading="lazy">
+                    </div>
+                    <div class="service-card-new__body">
+                        <div class="service-card-new__icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3 class="service-card-new__title">Web Design &amp; Development</h3>
+                        <p class="service-card-new__text">Beautiful, responsive websites built with cutting-edge
+                            technology. Designed to convert visitors into customers.</p>
+                        <a class="service-card-new__link" href="services.html#webdev">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card-new">
+                    <div class="service-card-new__img">
+                        <img src="./images/social-media-service.png" alt="Social Media" loading="lazy">
+                    </div>
+                    <div class="service-card-new__body">
+                        <div class="service-card-new__icon"><i class="fa-solid fa-share-nodes"></i></div>
+                        <h3 class="service-card-new__title">Social Media Marketing</h3>
+                        <p class="service-card-new__text">Engage your audience across all social platforms. We create
+                            content that builds communities and drives sales.</p>
+                        <a class="service-card-new__link" href="services.html#smo">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card-new">
+                    <div class="service-card-new__img">
+                        <img src="./images/ppc-service.png" alt="Pay Per Click" loading="lazy">
+                    </div>
+                    <div class="service-card-new__body">
+                        <div class="service-card-new__icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3 class="service-card-new__title">Pay Per Click Advertising</h3>
+                        <p class="service-card-new__text">Maximize your ROI with targeted PPC campaigns on Google Ads
+                            and social media platforms.</p>
+                        <a class="service-card-new__link" href="services.html#ppc">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card-new">
+                    <div class="service-card-new__img">
+                        <img src="./images/branding-service.png" alt="Branding" loading="lazy">
+                    </div>
+                    <div class="service-card-new__body">
+                        <div class="service-card-new__icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3 class="service-card-new__title">Corporate Branding</h3>
+                        <p class="service-card-new__text">Build a memorable brand identity with our expert logo design,
+                            print materials, and visual branding strategies.</p>
+                        <a class="service-card-new__link" href="services.html#branding">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card-new">
+                    <div class="service-card-new__img">
+                        <img src="./images/email-marketing.png" alt="Email Marketing" loading="lazy">
+                    </div>
+                    <div class="service-card-new__body">
+                        <div class="service-card-new__icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <h3 class="service-card-new__title">Email Marketing</h3>
+                        <p class="service-card-new__text">Nurture leads and retain customers with personalized email
+                            campaigns that deliver measurable results.</p>
+                        <a class="service-card-new__link" href="services.html#email">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-banner__overlay"></div>
+        <div class="container cta-banner__inner">
+            <div class="cta-banner__left">
+                <span class="section-tag section-tag--light">Why Choose Us</span>
+                <h2 class="cta-banner__title">We're bringing our marketing savvy to another Main Street.</h2>
+                <p class="cta-banner__text">We turn cold leads into warm customers and warm customers into brand
+                    advocates.</p>
+                <div class="cta-banner__btns">
+                    <a class="btn btn--primary btn--lg" href="contact.html">Get in Touch</a>
+                    <a class="btn btn--glass btn--lg" href="pricing.html">Our Pricing</a>
+                </div>
+            </div>
+            <div class="cta-banner__right">
+                <div class="cta-banner__feature">
+                    <div class="cta-banner__feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div>
+                        <div class="cta-banner__feature-title">Data-Driven Strategy</div>
+                        <div class="cta-banner__feature-text">Every decision backed by analytics</div>
+                    </div>
+                </div>
+                <div class="cta-banner__feature">
+                    <div class="cta-banner__feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <div class="cta-banner__feature-title">White-Hat Techniques</div>
+                        <div class="cta-banner__feature-text">Safe, ethical, long-lasting results</div>
+                    </div>
+                </div>
+                <div class="cta-banner__feature">
+                    <div class="cta-banner__feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div>
+                        <div class="cta-banner__feature-title">Dedicated Support</div>
+                        <div class="cta-banner__feature-text">Personal account manager for you</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiles: Strategy -> Traffic -> Conversion -->
+    <section class="tiles">
+        <div class="container">
+            <span class="section-tag">Our Process</span>
+            <h2 class="tiles__title">We turn cold leads into sales</h2>
+            <div class="tiles__grid">
+                <div class="tile">
+                    <div class="tile__img">
+                        <img src="./images/seo-service.png" alt="Strategy" loading="lazy">
+                    </div>
+                    <div class="tile__overlay">
+                        <div class="tile__number">01</div>
+                        <div class="tile__label">Strategy</div>
+                        <p class="tile__desc">Deep market research and competitive analysis to build your roadmap.</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile__img">
+                        <img src="./images/social-media-service.png" alt="Traffic" loading="lazy">
+                    </div>
+                    <div class="tile__overlay">
+                        <div class="tile__number">02</div>
+                        <div class="tile__label">Traffic</div>
+                        <p class="tile__desc">Targeted campaigns to drive qualified visitors to your site.</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile__img">
+                        <img src="./images/ppc-service.png" alt="Conversion" loading="lazy">
+                    </div>
+                    <div class="tile__overlay">
+                        <div class="tile__number">03</div>
+                        <div class="tile__label">Conversion</div>
+                        <p class="tile__desc">Optimized funnels that turn visitors into paying customers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted">
+        <div class="container">
+            <h3 class="trusted__title">Loved and trusted by the industry leaders</h3>
+            <div class="trusted__logos">
+                <div class="trusted__logo"><i class="fa-solid fa-building"></i> TechCorp</div>
+                <div class="trusted__logo"><i class="fa-solid fa-store"></i> RetailHub</div>
+                <div class="trusted__logo"><i class="fa-solid fa-briefcase"></i> BizGroup</div>
+                <div class="trusted__logo"><i class="fa-solid fa-landmark"></i> FinanceX</div>
+                <div class="trusted__logo"><i class="fa-solid fa-heart-pulse"></i> HealthPro</div>
+                <div class="trusted__logo"><i class="fa-solid fa-graduation-cap"></i> EduStar</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how" aria-label="How it works">
+        <div class="container">
+            <span class="section-tag section-tag--light">Our Workflow</span>
+            <h2 class="how__title">How it works</h2>
+            <div class="how__grid">
+                <div class="how__item">
+                    <div class="how__step-num">01</div>
+                    <div class="how__icon"><i class="fa-regular fa-handshake"></i></div>
+                    <div class="how__name">Become Our Friend</div>
+                    <p class="how__desc">Fill in the form and introduce yourself. We'd love to hear about your project.
+                    </p>
+                </div>
+                <div class="how__item">
+                    <div class="how__step-num">02</div>
+                    <div class="how__icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="how__name">Requirement Gathering</div>
+                    <p class="how__desc">We contact you to get more details on keywords and your time frame.</p>
+                </div>
+                <div class="how__item">
+                    <div class="how__step-num">03</div>
+                    <div class="how__icon"><i class="fa-solid fa-chess"></i></div>
+                    <div class="how__name">Campaign Strategy</div>
+                    <p class="how__desc">Based on your business goals, we devise a strategy for profitable results.</p>
+                </div>
+                <div class="how__item">
+                    <div class="how__step-num">04</div>
+                    <div class="how__icon"><i class="fa-solid fa-chart-column"></i></div>
+                    <div class="how__name">Monitor Performance</div>
+                    <p class="how__desc">Every month we send analyses and recommendations based on industry metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="reviews__title">What our customers are<br>saying about us</h2>
+            <div class="reviews__grid">
+                <div class="review">
+                    <div class="review__stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review__quote">"Their SEO work delivered quick wins and consistent growth. Our traffic
+                        increased by 300% in just 6 months. Highly recommend their services!"</div>
+                    <div class="review__author">
+                        <div class="review__avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="review__meta">
+                            <span class="review__name">Ahmed Khan</span>
+                            <span class="review__role">Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review__quote">"The team was responsive, professional, and the design looks amazing.
+                        They completely transformed our online presence and brand identity."</div>
+                    <div class="review__author">
+                        <div class="review__avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="review__meta">
+                            <span class="review__name">Sarah Williams</span>
+                            <span class="review__role">Marketing Manager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="review__quote">"Great communication and a smooth process from start to launch. They
+                        understood our vision perfectly and delivered beyond expectations."</div>
+                    <div class="review__author">
+                        <div class="review__avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="review__meta">
+                            <span class="review__name">Michael Ross</span>
+                            <span class="review__role">Startup Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <span class="section-tag">Latest Insights</span>
+            <h2 class="blog__title">Our Blog</h2>
+            <div class="blog__grid">
+                <article class="blog-card">
+                    <div class="blog-card__img">
+                        <img src="./images/seo_2.jpg" alt="SEO Strategy" loading="lazy">
+                        <span class="blog-card__cat">SEO</span>
+                    </div>
+                    <div class="blog-card__body">
+                        <div class="blog-card__date"><i class="fa-regular fa-calendar"></i> Feb 28, 2026</div>
+                        <h3 class="blog-card__title">How to Build a Successful SEO Strategy in 2026</h3>
+                        <p class="blog-card__text">Practical steps to improve rankings and grow organic traffic with
+                            modern search techniques.</p>
+                        <a class="blog-card__more" href="blog.html">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-card__img">
+                        <img src="./images/web_development_image.jpg" alt="Design Trends" loading="lazy">
+                        <span class="blog-card__cat">Design</span>
+                    </div>
+                    <div class="blog-card__body">
+                        <div class="blog-card__date"><i class="fa-regular fa-calendar"></i> Feb 20, 2026</div>
+                        <h3 class="blog-card__title">Design Trends That Convert Visitors Into Customers</h3>
+                        <p class="blog-card__text">Modern UI patterns and best practices for high-converting websites
+                            and landing pages.</p>
+                        <a class="blog-card__more" href="blog.html">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-card__img">
+                        <img src="./images/social_media_optimization_image.jpg" alt="Digital Marketing" loading="lazy">
+                        <span class="blog-card__cat">Marketing</span>
+                    </div>
+                    <div class="blog-card__body">
+                        <div class="blog-card__date"><i class="fa-regular fa-calendar"></i> Feb 15, 2026</div>
+                        <h3 class="blog-card__title">Digital Marketing for Local Businesses: A Complete Guide</h3>
+                        <p class="blog-card__text">Campaign ideas to capture leads, increase conversions, and dominate
+                            your local market.</p>
+                        <a class="blog-card__more" href="blog.html">Read More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container final-cta__inner">
+            <div class="final-cta__left">
+                <div class="final-cta__small"><i class="fa-solid fa-phone"></i> Call us now</div>
+                <div class="final-cta__big">+92-321-111-236-8</div>
+            </div>
+            <div class="final-cta__center">
+                <div class="final-cta__question">ready to discuss your project?</div>
+                <a class="btn btn--dark" href="contact.html">Request Info</a>
+            </div>
+            <div class="final-cta__right">
+                <div class="final-cta__small"><i class="fa-solid fa-envelope"></i> Or email us</div>
+                <div class="final-cta__big">info@rehmaxdigitals.com</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <img src="./images/Rehmax Logo.jpg" alt="Rehmax Digitals" class="footer__logo">
+                <p class="footer__text">We create high-performing digital experiences that help businesses grow online
+                    and generate real revenue.</p>
+                <div class="footer__socials">
+                    <a class="footer__social-link" href="#" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a class="footer__social-link" href="#" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a class="footer__social-link" href="#" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="footer__social-link" href="#" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Pages</div>
+                <a class="footer__link" href="index.html">Home</a>
+                <a class="footer__link" href="services.html">Services</a>
+                <a class="footer__link" href="about.html">About Us</a>
+                <a class="footer__link" href="pricing.html">Pricing</a>
+                <a class="footer__link" href="blog.html">Blog</a>
+                <a class="footer__link" href="contact.html">Contact</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Services</div>
+                <a class="footer__link" href="services.html#seo">SEO</a>
+                <a class="footer__link" href="services.html#webdev">Web Development</a>
+                <a class="footer__link" href="services.html#smo">Social Media</a>
+                <a class="footer__link" href="services.html#ppc">Pay Per Click</a>
+                <a class="footer__link" href="services.html#branding">Branding</a>
+                <a class="footer__link" href="services.html#email">Email Marketing</a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Contact</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-envelope"></i> info@rehmaxdigitals.com</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-phone"></i> +92-321-111-236-8</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-clock"></i> Mon - Fri, 9am - 6pm</div>
+                <div class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</div>
+            </div>
+        </div>
+        <div class="container footer__bottom">&copy; 2026 Rehmax Digitals. All rights reserved.</div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a class="float float--whatsapp" href="https://wa.me/923211112368" target="_blank" aria-label="WhatsApp"><i
+            class="fa-brands fa-whatsapp"></i></a>
+    <button class="float float--chat" id="chatToggle" aria-label="Chat">
+        <i class="fa-solid fa-comment-dots"></i>
+    </button>
+    <div class="chat" id="chatWidget" aria-hidden="true">
+        <div class="chat__head">
+            <div class="chat__title">Need help?</div>
+            <button class="chat__close" id="chatClose" aria-label="Close chat"><i
+                    class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chat__body">
+            <div class="chat__msg">Hi! How can we help you today?</div>
+        </div>
+        <div class="chat__foot">
+            <input class="chat__input" type="text" placeholder="Type a message...">
+            <button class="chat__send" type="button"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
