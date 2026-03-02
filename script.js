@@ -5,6 +5,8 @@
 function qs(sel) { return document.querySelector(sel); }
 function qsa(sel) { return Array.from(document.querySelectorAll(sel)); }
 
+document.documentElement.classList.add('js');
+
 /* Notification Toast */
 function showNotification(message, type = 'info') {
     const existing = qs('.notification');
@@ -18,8 +20,8 @@ function showNotification(message, type = 'info') {
         transform: 'translateX(120%)', transition: 'transform 0.35s ease',
         maxWidth: '320px', boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
         background: type === 'success' ? 'linear-gradient(135deg,#28a745,#20c997)' :
-                    type === 'error' ? 'linear-gradient(135deg,#dc3545,#c82333)' :
-                    'linear-gradient(135deg,#111,#333)',
+            type === 'error' ? 'linear-gradient(135deg,#dc3545,#c82333)' :
+                'linear-gradient(135deg,#111,#333)',
         fontSize: '14px'
     });
     document.body.appendChild(n);
@@ -106,8 +108,33 @@ const contactForm = qs('#contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', e => {
         e.preventDefault();
-        showNotification('Your message has been sent! We\'ll get back to you soon.', 'success');
-        contactForm.reset();
+        const nameEl = qs('#cfName');
+        const emailEl = qs('#cfEmail');
+        const phoneEl = qs('#cfPhone');
+        const serviceEl = qs('#cfService');
+        const subjectEl = qs('#cfSubject');
+        const messageEl = qs('#cfMessage');
+
+        const name = nameEl ? nameEl.value.trim() : '';
+        const email = emailEl ? emailEl.value.trim() : '';
+        const phone = phoneEl ? phoneEl.value.trim() : '';
+        const service = serviceEl ? serviceEl.value : '';
+        const subject = subjectEl ? subjectEl.value.trim() : 'Website Contact';
+        const message = messageEl ? messageEl.value.trim() : '';
+
+        const bodyLines = [
+            `Name: ${name}`,
+            `Email: ${email}`,
+            `Phone: ${phone}`,
+            `Service: ${service}`,
+            '',
+            message,
+        ];
+
+        const mailto = `mailto:RehmaxDigitals@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+        window.location.href = mailto;
+        showNotification('Opening your email app…', 'success');
     });
 }
 
@@ -121,7 +148,61 @@ function openChat(open) {
     chatWidget.classList.toggle('is-open', open);
     chatWidget.setAttribute('aria-hidden', !open);
 }
-if (chatToggle2) chatToggle2.addEventListener('click', () => openChat(!chatWidget.classList.contains('is-open')));
+
+let tawkLoaded = false;
+
+function initTawkLoadHook() {
+    if (!window.Tawk_API) return;
+
+    const prevOnLoad = window.Tawk_API.onLoad;
+    window.Tawk_API.onLoad = function () {
+        tawkLoaded = true;
+        if (typeof prevOnLoad === 'function') prevOnLoad();
+
+        if (chatWidget) {
+            chatWidget.classList.remove('is-open');
+            chatWidget.setAttribute('aria-hidden', 'true');
+            chatWidget.style.display = 'none';
+        }
+    };
+}
+
+initTawkLoadHook();
+
+function maximizeTawkWithRetry() {
+    if (!window.Tawk_API) return false;
+
+    const tryMaximize = () => {
+        if (typeof window.Tawk_API.maximize === 'function') {
+            window.Tawk_API.maximize();
+            return true;
+        }
+        return false;
+    };
+
+    if (tawkLoaded && tryMaximize()) return true;
+    if (tryMaximize()) return true;
+
+    // Tawk script may still be loading on slower/mobile connections.
+    let attemptsLeft = 25;
+    const intervalId = window.setInterval(() => {
+        attemptsLeft -= 1;
+        if (tryMaximize() || attemptsLeft <= 0) {
+            window.clearInterval(intervalId);
+        }
+    }, 200);
+
+    showNotification('Loading chat…', 'success');
+    return true;
+}
+
+if (chatToggle2) {
+    chatToggle2.addEventListener('click', () => {
+        if (maximizeTawkWithRetry()) return;
+        if (chatWidget) openChat(!chatWidget.classList.contains('is-open'));
+        else showNotification('Chat is not configured yet.', 'error');
+    });
+}
 if (chatClose) chatClose.addEventListener('click', () => openChat(false));
 
 /* Stats counter animation */
@@ -147,17 +228,50 @@ function animateCounters() {
 window.addEventListener('scroll', animateCounters);
 animateCounters();
 
-/* Scroll reveal animation */
-function revealOnScroll() {
-    qsa('.reveal').forEach(el => {
+/* Smooth section reveal animation */
+try {
+    const revealTargets = document.querySelectorAll('section, .bento-item, .tile, .review, .blog-card, .masonry-card, .stats__item');
+    revealTargets.forEach((el) => {
+        el.classList.add('reveal');
+        el.classList.add('reveal--pending');
+    });
+
+    const showIfInViewport = (el) => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60) {
+        if (rect.top < window.innerHeight - 40 && rect.bottom > 0) {
             el.classList.add('is-visible');
+            el.classList.remove('reveal--pending');
         }
+    };
+
+    revealTargets.forEach(showIfInViewport);
+
+    if (!('IntersectionObserver' in window)) {
+        revealTargets.forEach((el) => {
+            el.classList.add('is-visible');
+            el.classList.remove('reveal--pending');
+        });
+    } else {
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        entry.target.classList.remove('reveal--pending');
+                    }
+                });
+            },
+            { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        revealTargets.forEach((el) => revealObserver.observe(el));
+    }
+} catch (e) {
+    document.querySelectorAll('.reveal').forEach((el) => {
+        el.classList.add('is-visible');
+        el.classList.remove('reveal--pending');
     });
 }
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
 
 /* Smooth scroll for anchor links */
 qsa('a[href^="#"]').forEach(anchor => {

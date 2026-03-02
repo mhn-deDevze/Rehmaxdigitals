@@ -177,7 +177,7 @@ button {
 }
 
 .brand__logo {
-    height: 42px;
+    height: 82px;
     width: auto;
 }
 
@@ -544,15 +544,19 @@ button {
 /* ============ LEAD STRIP ============ */
 .lead-strip {
     padding: 0;
-    margin-top: -30px;
+    margin-top: -40px;
     position: relative;
     z-index: 5;
 }
 
+.lead-strip .container {
+    max-width: 1320px;
+}
+
 .lead-strip__card {
     background: var(--primary);
-    border-radius: 999px;
-    padding: 14px 20px;
+    border-radius: 30px;
+    padding: 18px 24px;
     box-shadow: var(--shadow-lg);
 }
 
@@ -561,36 +565,41 @@ button {
     font-weight: 800;
     text-transform: lowercase;
     text-align: center;
-    margin-bottom: 8px;
-    font-size: 13px;
+    margin-bottom: 12px;
+    font-size: 22px;
 }
 
 .lead-strip__form {
     display: grid;
     grid-template-columns: 1.1fr 1.2fr 1.3fr 1fr 1fr;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
+    border-radius: 10px;
+
 }
 
 .lead-strip__input {
-    height: 40px;
-    border-radius: 999px;
+    height: 46px;
+    border-radius: 0;
     border: 0;
-    padding: 0 16px;
+    padding: 0 14px;
     font-size: 13px;
     outline: none;
     font-family: inherit;
+    border-radius: 10px;
 }
 
 .lead-strip__btn {
-    height: 40px;
-    border-radius: 999px;
+    height: 46px;
+    border-radius: 0;
     border: 0;
     cursor: pointer;
     font-weight: 800;
-    background: var(--black);
+    background: #111;
+        border-radius: 10px;
+
     color: #fff;
-    font-family: inherit;
+    transition: all var(--transition);
     font-size: 13px;
     transition: all var(--transition);
     display: inline-flex;
@@ -667,6 +676,119 @@ button {
     line-height: 1.6;
 }
 
+.mosaic {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+    margin-top: 26px;
+}
+
+.mosaic__left,
+.mosaic__right {
+    min-width: 0;
+}
+
+.mosaic-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--black);
+    color: #fff;
+    padding: 26px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mosaic-card__label {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.mosaic-card__media {
+    flex: 1;
+    min-height: 320px;
+    border-radius: 12px;
+    background-image: url('./images/1.png');
+    background-size: cover;
+    background-position: 0 33.5%;
+}
+
+.mosaic-card__btn {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+}
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.mosaic-mini {
+    border-radius: 14px;
+    padding: 16px;
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.mosaic-mini__title {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1.2;
+    max-width: 180px;
+}
+
+.mosaic-mini__meta {
+    font-size: 12px;
+    font-weight: 800;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+.mosaic-mini__media {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 86px;
+    height: 64px;
+    border-radius: 14px;
+    background-image: url('./images/1.png');
+    background-size: 420px auto;
+    background-position: 78% 33.5%;
+    opacity: 0.95;
+}
+
+.mosaic-mini--teal { background: #2bd0c6; }
+.mosaic-mini--red { background: #ff4b4b; color: #fff; }
+.mosaic-mini--mint { background: #7be3bf; }
+.mosaic-mini--yellow { background: #ffd24d; }
+.mosaic-mini--charcoal { background: #2a2a2a; color: #fff; }
+.mosaic-mini--pink { background: #ff6aa2; color: #fff; }
+
+.mosaic-mini--teal .mosaic-mini__media { background-position: 58% 33.5%; }
+.mosaic-mini--red .mosaic-mini__media { background-position: 78% 33.5%; }
+.mosaic-mini--mint .mosaic-mini__media { background-position: 58% 37.5%; }
+.mosaic-mini--yellow .mosaic-mini__media { background-position: 78% 37.5%; }
+.mosaic-mini--charcoal .mosaic-mini__media { background-position: 58% 41.5%; }
+.mosaic-mini--pink .mosaic-mini__media { background-position: 78% 41.5%; }
+
 .services-masonry {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -700,6 +822,29 @@ button {
     position: relative;
     z-index: 2;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.masonry-card__img-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.masonry-card__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.masonry-card:hover .masonry-card__img {
+    transform: scale(1.05);
+    /* Slight pop effect on hover */
 }
 
 .masonry-card::before {
@@ -736,6 +881,30 @@ button {
     /* Left column is one large card */
     min-height: 550px;
     /* Make it match height of 2 mediums */
+}
+
+@media (min-width: 1024px) {
+    .services-masonry {
+        align-items: stretch;
+    }
+
+    .masonry-col {
+        height: 100%;
+        align-self: stretch;
+    }
+
+    .masonry-col:nth-child(1) .masonry-card--large {
+        position: sticky;
+        top: 120px;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1023px) {
+    .masonry-col:nth-child(1) .masonry-card--large {
+        position: relative;
+        top: auto;
+    }
 }
 
 .masonry-col:nth-child(2) .masonry-card--medium {
@@ -2040,15 +2209,53 @@ button {
 }
 
 /* Scroll reveal */
-.reveal {
+html.js .reveal {
+    opacity: 1;
+    transform: none;
+}
+
+html.js .reveal.reveal--pending {
     opacity: 0;
     transform: translateY(24px);
     transition: all 0.7s ease;
 }
 
-.reveal.is-visible {
+html.js .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+html.js .fade-up {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+
+html.js .fade-up.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-up,
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* ============ RESPONSIVE ============ */
@@ -2257,7 +2464,7 @@ button {
     }
 
     .lead-strip__card {
-        border-radius: var(--radius-lg);
+        border-radius: 0;
     }
 
     .lead-strip__form {
