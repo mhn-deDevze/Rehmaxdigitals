@@ -107,6 +107,12 @@ if (leadForm) {
 const contactForm = qs('#contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', e => {
+        if (!contactForm.checkValidity()) {
+            if (typeof contactForm.reportValidity === 'function') contactForm.reportValidity();
+            showNotification('Please fill all required fields.', 'error');
+            return;
+        }
+
         e.preventDefault();
         const nameEl = qs('#cfName');
         const emailEl = qs('#cfEmail');
@@ -137,7 +143,7 @@ if (contactForm) {
         // Use a fallback <a> click which tends to be more reliable.
         let launched = false;
         try {
-            window.location.assign(mailto);
+            window.open(mailto, '_self');
             launched = true;
         } catch (_) {
             launched = false;
@@ -145,16 +151,50 @@ if (contactForm) {
 
         if (!launched) {
             try {
-                const a = document.createElement('a');
-                a.href = mailto;
-                a.style.display = 'none';
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
+                window.location.assign(mailto);
                 launched = true;
             } catch (_) {
                 launched = false;
             }
+        }
+
+        if (!launched) {
+            try {
+                window.location.href = mailto;
+                launched = true;
+            } catch (_) {
+                launched = false;
+            }
+        }
+
+        if (!launched) {
+            try {
+                const existing = qs('#mailtoFallback');
+                if (existing) existing.remove();
+                const link = document.createElement('a');
+                link.id = 'mailtoFallback';
+                link.href = mailto;
+                link.textContent = 'Click here to email us';
+                link.style.display = 'inline-block';
+                link.style.marginTop = '12px';
+                link.style.fontWeight = '700';
+                link.style.color = 'var(--primary)';
+                contactForm.appendChild(link);
+            } catch (_) {
+                // ignore
+            }
+        }
+
+        try {
+            const a = document.createElement('a');
+            a.href = mailto;
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            launched = true;
+        } catch (_) {
+            launched = false;
         }
 
         if (launched) showNotification('Opening your email app…', 'success');
